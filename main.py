@@ -18,8 +18,9 @@ import webapp2
 from airbnb_agenda import get_agenda
 
 class MainHandler(webapp2.RequestHandler):
-    def get(self):
-    	agenda = get_agenda("https://www.airbnb.com/calendar/ical/11094613.ics?s=fd5bd3c7667036b0cba9298d60c488b0")
+    def get(self):    	
+    	agenda = get_agenda(self.request.get('ics'))
+    	self.response.headers['Content-Type'] = 'text/calendar; charset=utf-8'
         self.response.write(agenda.to_ical())
 
 app = webapp2.WSGIApplication([
