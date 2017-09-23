@@ -19,9 +19,16 @@ from airbnb_agenda import get_agenda
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):    	
-    	agenda = get_agenda(self.request.get('ics'))
-    	self.response.headers['Content-Type'] = 'text/calendar; charset=utf-8'
-        self.response.write(agenda.to_ical())
+    	if self.request.get('ics'):
+    		agenda = get_agenda(self.request.get('ics'))
+    		self.response.headers['Content-Type'] = 'text/calendar; charset=utf-8'
+        	self.response.write(agenda.to_ical())
+        else:
+        	self.response.headers['Content-Type'] = 'text/html; charset=utf-8'
+        	self.response.out.write('<html><body><form action="" method="get">')
+        	self.response.out.write('<p><input type="text" name="ics" placeholder="Your ICS url"></p>')
+        	self.response.out.write('<p><button type="submit">Submit</button></p>')
+        	self.response.out.write('</form></body></html>')
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
