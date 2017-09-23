@@ -3,7 +3,7 @@ from datetime import datetime
 from pytz import UTC # timezone
 from urllib2 import urlopen, Request
 
-function get_agenda(url): 
+def get_agenda(url): 
 	req = Request(url)
 	req.add_header('User-agent', 'Mozilla 5.10')
 
