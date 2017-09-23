@@ -1,6 +1,5 @@
 from icalendar import Calendar, Event
 from datetime import datetime
-from pytz import UTC # timezone
 from urllib2 import urlopen, Request
 
 def get_agenda(url): 
