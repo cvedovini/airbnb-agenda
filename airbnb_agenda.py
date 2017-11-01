@@ -18,14 +18,14 @@ def get_agenda(url):
 	alarm1['description'] = 'This is an event reminder'
 	alarm1['summary'] = 'Alarm notification'
 	alarm1['attendee'] = 'mailto:claude@vedovini.net'
-	alarm1['trigger'] = '-P1D'
+	alarm1['trigger'] = '-P1DT9H0M0S'
 
 	alarm2 = Alarm()
 	alarm2['action'] = 'EMAIL'
 	alarm2['description'] = 'This is an event reminder'
 	alarm2['summary'] = 'Alarm notification'
 	alarm2['attendee'] = 'mailto:claude@vedovini.net'
-	alarm2['trigger'] = '-P5D'
+	alarm2['trigger'] = '-P5DT9H0M0S'
 
 	for c in gcal.walk():
 	    if c.name == "VEVENT" and 'location' in c:
