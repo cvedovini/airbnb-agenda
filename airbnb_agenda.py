@@ -2,6 +2,7 @@ from icalendar import Calendar, Event, Alarm
 from datetime import datetime
 from urllib2 import urlopen, Request
 
+
 def get_agenda(url): 
 	req = Request(url)
 	req.add_header('User-agent', 'Mozilla 5.10')
