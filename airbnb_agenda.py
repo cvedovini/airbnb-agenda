@@ -12,6 +12,8 @@ def get_agenda(url):
 
 	agenda['prodid'] = gcal['prodid']
 	agenda['version'] = '2.0'
+	agenda['calscale'] = 'GREGORIAN'
+	agenda['method'] = 'PUBLISH'
 
 	alarm1 = Alarm()
 	alarm1['action'] = 'EMAIL'
