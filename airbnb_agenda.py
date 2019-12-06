@@ -16,7 +16,7 @@ def get_checkin_agenda(url):
     agenda['method'] = 'PUBLISH'
 
     for c in gcal.walk():
-        if c.name == 'VEVENT' and 'location' in c:
+        if c.name == 'VEVENT' and 'description' in c:
             check_in = Event()
             check_in['summary'] = "CHECKIN - " + c['summary']
             check_in['description'] = c['description']
