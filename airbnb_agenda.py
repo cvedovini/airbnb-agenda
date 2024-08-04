@@ -1,13 +1,13 @@
 from icalendar import Calendar, Event, Alarm
 from datetime import datetime
-from urllib2 import urlopen, Request
+import requests
 
 
 def get_checkin_agenda(url, name): 
-    req = Request(url)
-    req.add_header('User-agent', 'Mozilla 5.10')
+    headers = { 'User-agent': 'Mozilla 5.10', }
+    res = res.get(url, headers=headers)
 
-    gcal = Calendar.from_ical(urlopen(req).read().decode('utf-8'))
+    gcal = Calendar.from_ical(res.text)
     agenda = Calendar()
 
     agenda['prodid'] = gcal['prodid']
@@ -29,10 +29,10 @@ def get_checkin_agenda(url, name):
 
 
 def get_checkout_agenda(url, name): 
-    req = Request(url)
-    req.add_header('User-agent', 'Mozilla 5.10')
+    headers = { 'User-agent': 'Mozilla 5.10', }
+    res = res.get(url, headers=headers)
 
-    gcal = Calendar.from_ical(urlopen(req).read().decode('utf-8'))
+    gcal = Calendar.from_ical(res.txt)
     agenda = Calendar()
 
     agenda['prodid'] = gcal['prodid']
