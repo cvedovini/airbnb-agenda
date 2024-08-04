@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/home/agenda/env/bin/python
 from icalendar import Calendar
 from airbnb_agenda import get_checkout_agenda
 from settings import LISTINGS_ICS
