@@ -12,4 +12,4 @@ agenda['method'] = 'PUBLISH'
 for name, url in LISTINGS_ICS:
     get_checkin_agenda(agenda, url, name)
 
-print(agenda.to_ical())
+print(agenda.to_ical().encode())
