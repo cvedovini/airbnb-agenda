@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from icalendar import Calendar
-from airbnb_agenda import get_checkin_agenda
+from airbnb_agenda import get_checkout_agenda
 from settings import LISTINGS_ICS
 
 agenda = Calendar()

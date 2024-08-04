@@ -5,7 +5,7 @@ import requests
 
 def get_checkin_agenda(agenda, url, name): 
     headers = { 'User-agent': 'Mozilla 5.10', }
-    res = res.get(url, headers=headers)
+    res = requests.get(url, headers=headers)
 
     gcal = Calendar.from_ical(res.text)
     agenda['prodid'] = gcal['prodid']
@@ -25,7 +25,7 @@ def get_checkin_agenda(agenda, url, name):
 
 def get_checkout_agenda(agenda, url, name): 
     headers = { 'User-agent': 'Mozilla 5.10', }
-    res = res.get(url, headers=headers)
+    res = requests.get(url, headers=headers)
 
     gcal = Calendar.from_ical(res.txt)
     agenda['prodid'] = gcal['prodid']
