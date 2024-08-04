@@ -3,17 +3,11 @@ from datetime import datetime
 import requests
 
 
-def get_checkin_agenda(url, name): 
+def get_checkin_agenda(agenda, url, name): 
     headers = { 'User-agent': 'Mozilla 5.10', }
     res = res.get(url, headers=headers)
 
     gcal = Calendar.from_ical(res.text)
-    agenda = Calendar()
-
-    agenda['prodid'] = gcal['prodid']
-    agenda['version'] = '2.0'
-    agenda['calscale'] = 'GREGORIAN'
-    agenda['method'] = 'PUBLISH'
 
     for c in gcal.walk():
         if c.name == 'VEVENT' and 'description' in c:
@@ -28,17 +22,12 @@ def get_checkin_agenda(url, name):
     return agenda
 
 
-def get_checkout_agenda(url, name): 
+def get_checkout_agenda(agenda, url, name): 
     headers = { 'User-agent': 'Mozilla 5.10', }
     res = res.get(url, headers=headers)
 
     gcal = Calendar.from_ical(res.txt)
     agenda = Calendar()
-
-    agenda['prodid'] = gcal['prodid']
-    agenda['version'] = '2.0'
-    agenda['calscale'] = 'GREGORIAN'
-    agenda['method'] = 'PUBLISH'
 
     for c in gcal.walk():
         if c.name == "VEVENT" and 'description' in c:
