@@ -8,6 +8,7 @@ def get_checkin_agenda(agenda, url, name):
     res = res.get(url, headers=headers)
 
     gcal = Calendar.from_ical(res.text)
+    agenda['prodid'] = gcal['prodid']
 
     for c in gcal.walk():
         if c.name == 'VEVENT' and 'description' in c:
@@ -27,7 +28,7 @@ def get_checkout_agenda(agenda, url, name):
     res = res.get(url, headers=headers)
 
     gcal = Calendar.from_ical(res.txt)
-    agenda = Calendar()
+    agenda['prodid'] = gcal['prodid']
 
     for c in gcal.walk():
         if c.name == "VEVENT" and 'description' in c:
