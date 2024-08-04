@@ -27,7 +27,7 @@ def get_checkout_agenda(agenda, url, name):
     headers = { 'User-agent': 'Mozilla 5.10', }
     res = requests.get(url, headers=headers)
 
-    gcal = Calendar.from_ical(res.txt)
+    gcal = Calendar.from_ical(res.text)
     agenda['prodid'] = gcal['prodid']
 
     for c in gcal.walk():
