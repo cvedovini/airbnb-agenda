@@ -10,6 +10,7 @@ LISTINGS_ICS = [
 	( '56/256', 'https://www.airbnb.com/calendar/ical/3276283.ics?s=eef857477c78bddda90ee0d9d008a0c8' ),
 	( '61/126', 'https://www.airbnb.com/calendar/ical/3676720.ics?s=b830791c4f5f53e2868d2a0ccb001eed' ),
 	( '75/132', 'https://www.airbnb.com/calendar/ical/746827407371909729.ics?s=2840669a11c53e5b876c2f1e4f861d45' ),
+	( '75/134', 'https://www.airbnb.com/calendar/ical/1257931352777553824.ics?s=3d5ac622dbb8133b6a33a30cae98a8df' ),
 	( '75/136', 'https://www.airbnb.com/calendar/ical/1025997648801994678.ics?s=a4d7d3b8df75950026e49d1618d1994d' ),
 	( '77/34', 'https://www.airbnb.com/calendar/ical/4357790.ics?s=8f963b9d8072cdb495eff652bfd76f6e' ),
 	( '77/37', 'https://www.airbnb.com/calendar/ical/19664498.ics?s=4e6d495c8ce16f2c6ae2a5bd9bf8e2be' ),
