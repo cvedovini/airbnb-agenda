@@ -22,5 +22,7 @@ LISTINGS_ICS = [
 	( 'RAWAI', 'https://www.airbnb.com/calendar/ical/1226775.ics?s=2d59609dfc9319d9d16aae3763c13870' ),
 	( 'S610', 'https://www.airbnb.com/calendar/ical/41986929.ics?s=45d22699bb0909762c0e33b078e1e360' ),
 	( 'S709', 'https://www.airbnb.com/calendar/ical/1370927452694519226.ics?s=68830c24c2a0ff7fdec78bed2eac5da8' ),
-	( '56/47', 'https://www.airbnb.com/calendar/ical/1392689285369605758.ics?s=fbe9b09dc8ab007da71986806e7ed595'),	
+	( '56/47', 'https://www.airbnb.com/calendar/ical/1392689285369605758.ics?s=fbe9b09dc8ab007da71986806e7ed595'),
+	( '56/27', 'https://www.airbnb.com/calendar/ical/1393039745662754820.ics?s=56ca523de356de909f6fb24b2780ad72'),
+	( '56/189', 'https://www.airbnb.com/calendar/ical/1393052930822085088.ics?s=cf0345f201fc70928cb3d265ef3e794c'),
 ]
