@@ -23,4 +23,5 @@ LISTINGS_ICS = [
 	( 'NSC - 610', 'https://www.airbnb.com/calendar/ical/41986929.ics?s=45d22699bb0909762c0e33b078e1e360' ),
 	( 'NSC -709', 'https://www.airbnb.com/calendar/ical/1370927452694519226.ics?s=68830c24c2a0ff7fdec78bed2eac5da8' ),
 	( 'PLUS2 - 56/189', 'https://www.airbnb.com/calendar/ical/1393052930822085088.ics?s=cf0345f201fc70928cb3d265ef3e794c'),
+	( 'PLUS2 - 56/44', 'https://www.airbnb.com/calendar/ical/1392689285369605758.ics?s=fbe9b09dc8ab007da71986806e7ed595'),
 ]
