@@ -3,6 +3,18 @@ from datetime import datetime
 import requests
 
 
+def get_description(e):
+    start = e['dtstart'].strftime("%A, %b %d, %Y")
+    end = e['dtend'].strftime("%A, %b %d, %Y")
+    danightsys = (e['dtend'] - e['dtstart']).days
+
+    return """Checkin: %s
+Checkout: %s
+Nights: %d
+
+%s""" % (start, end, nights, e['description'])
+
+
 def get_agenda(agenda, url, name): 
     headers = { 'User-agent': 'Mozilla 5.10', }
     res = requests.get(url, headers=headers)
@@ -14,7 +26,7 @@ def get_agenda(agenda, url, name):
         if c.name == 'VEVENT' and 'description' in c:
             check_in = Event()
             check_in['summary'] = name
-            check_in['description'] = c['description']
+            check_in['description'] = get_description(c)
             # check_in['location'] = c['location']
             check_in['dtstart'] = c['dtstart']
             check_in['dtend'] = c['dtend']
@@ -35,7 +47,7 @@ def get_checkin_agenda(agenda, url, name):
         if c.name == 'VEVENT' and 'description' in c:
             check_in = Event()
             check_in['summary'] = "CHECKIN - " + name
-            check_in['description'] = c['description']
+            check_in['description'] = get_description(c)
             # check_in['location'] = c['location']
             check_in['dtstart'] = check_in['dtend'] = c['dtstart']
             check_in['uid'] = "checkin-" + c['uid']
@@ -55,7 +67,7 @@ def get_checkout_agenda(agenda, url, name):
         if c.name == "VEVENT" and 'description' in c:
             check_out = Event()
             check_out['summary'] = "CHECKOUT - " + name
-            check_out['description'] = c['description']
+            check_out['description'] = get_description(c)
             # check_out['location'] = c['location']
             check_out['dtstart'] = check_out['dtend'] = c['dtend']
             check_out['uid'] = "checkout-" + c['uid']
