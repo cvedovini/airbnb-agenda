@@ -6,7 +6,7 @@ import requests
 def get_description(e):
     start = e['dtstart'].dt.strftime("%A, %b %m %Y")
     end = e['dtend'].dt.strftime("%A, %b %m %Y")
-    nights = (end.dt - start.dt).days
+    nights = (e['dtend'].dt - e['dtstart'].dt).days
 
     return """Checkin: %s
 Checkout: %s
