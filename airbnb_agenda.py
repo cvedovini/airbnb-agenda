@@ -4,13 +4,15 @@ import requests
 
 
 def get_description(e):
-    start = e['dtstart']
-    end = e['dtend']
+    start = e['dtstart'].dt.strftime("%A, %b %m %Y")
+    end = e['dtend'].dt.strftime("%A, %b %m %Y")
+    nights = (end - start).days
 
     return """Checkin: %s
 Checkout: %s
+Nights: %d
 
-%s""" % (start, end, e['description'])
+%s""" % (start, end, nights, e['description'])
 
 
 def get_agenda(agenda, url, name): 
