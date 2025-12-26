@@ -4,8 +4,8 @@ import requests
 
 
 def get_description(e):
-    start = e['dtstart'].dt.strftime("%A, %b %m %Y")
-    end = e['dtend'].dt.strftime("%A, %b %m %Y")
+    start = e['dtstart'].dt.strftime("%A, %b %-d %Y")
+    end = e['dtend'].dt.strftime("%A, %b %-d %Y")
     nights = (e['dtend'].dt - e['dtstart'].dt).days
 
     return """Checkin: %s
