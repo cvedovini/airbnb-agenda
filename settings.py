@@ -22,8 +22,8 @@ LISTINGS_ICS = [
 	( 'PRC - 85/44', 'https://www.airbnb.com/calendar/ical/1226775.ics?s=2d59609dfc9319d9d16aae3763c13870' ),
 	( 'NSC - 610', 'https://www.airbnb.com/calendar/ical/41986929.ics?s=45d22699bb0909762c0e33b078e1e360' ),
 	( 'NSC -709', 'https://www.airbnb.com/calendar/ical/1370927452694519226.ics?s=68830c24c2a0ff7fdec78bed2eac5da8' ),
-	( 'PLUS2 - 56/189', 'https://www.airbnb.com/calendar/ical/1393052930822085088.ics?s=cf0345f201fc70928cb3d265ef3e794c'),
-	( 'PLUS2 - 56/44', 'https://www.airbnb.com/calendar/ical/1392689285369605758.ics?s=fbe9b09dc8ab007da71986806e7ed595'),
+	( 'PLUS2 - 56/99', 'https://www.airbnb.com/calendar/ical/1698961780868755187.ics?t=601dfe8292824a749d0565c3673369e6' ),
+	( 'PLUS2 - 56/44', 'https://www.airbnb.com/calendar/ical/1392689285369605758.ics?s=fbe9b09dc8ab007da71986806e7ed595' ),
 	( 'DCC - 73/207', 'https://www.airbnb.com/calendar/ical/1529437395479523339.ics?s=a08128ab074001dada5c02e3c618c330' ),
 	( 'GLV - 38/112', 'https://www.airbnb.com/calendar/ical/1550751833656322494.ics?s=3b86b793e3d302f796fdd10ec37bfac4' ),
 ]
