@@ -9,6 +9,7 @@ LISTINGS_ICS = [
 	( 'PLUS2 - 56/254', 'https://www.airbnb.com/calendar/ical/3276067.ics?s=5b8f7080f13a1d971134718d805aa26f' ),
 	( 'PLUS2 - 56/256', 'https://www.airbnb.com/calendar/ical/3276283.ics?s=eef857477c78bddda90ee0d9d008a0c8' ),
 	( 'DCK - 61/119', 'https://www.airbnb.com/calendar/ical/1681202815838050413.ics?t=42c3c16359464d4b96911d5d0bc59d2e'),
+	( 'DCK - 61/119', 'https://www.airbnb.com/calendar/ical/1778240988290361975.ics?t=457dbc55c1714c0ab0bcf82077b93f63'),
 	( 'DCK - 61/126', 'https://www.airbnb.com/calendar/ical/3676720.ics?s=b830791c4f5f53e2868d2a0ccb001eed' ),
 	( 'DCC - 75/132', 'https://www.airbnb.com/calendar/ical/746827407371909729.ics?s=2840669a11c53e5b876c2f1e4f861d45' ),
 	( 'DCC - 75/134', 'https://www.airbnb.com/calendar/ical/1257931352777553824.ics?s=3d5ac622dbb8133b6a33a30cae98a8df' ),
